@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<img src="../img/1.jpg"/>
+		<img src="../img/2.jpg"/>
+		<img src="../img/3.jpg"/>
+		<img src="../img/卫庄.jpg"/>
+		<img src="../img/张良.jpg"/>
+		<img src="../img/紫女.jpg"/>
+		<img src="../img/流沙.jpg"/>
+    <script type="text/javascript">
+    	var imgs=document.getElementsByTagName("img");
+    	var count=0;
+      for (var i=0;i<imgs.length;i++) {
+      	imgs[i].onload=function(){
+      		count++;
+      		if (count==imgs.length) {
+      			alert("加载完毕");
+      		}
+      	}
+      }
+    </script>
+	</body>
+</html>

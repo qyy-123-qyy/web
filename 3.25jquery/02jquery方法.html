@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 0px;
+				height: 40px;
+				background-color: palevioletred;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p class="aa"></p>
+		<p></p>
+		<p></p>
+		<p></p>		
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//$(this).index()是一个很常见的写法，表示触发这个事件的元素，在自己亲兄弟中的排名：
+			/*$(".aa").click(function(){
+				alert("我是"+$(this).index());
+			})*/
+			$("p").click(function(){
+				alert("我是"+$(this).index());
+			});
+			
+			/*get()方法和eq()方法基本一致，都仰赖$()的序列。
+              eq()返回的是jQuery对象，而get()返回的是原生JS对象。
+                jQuery对象后面要跟着jQuery方法，原生对象后面要跟着原生属性、*/
+//			$("p").get(2).style.backgroundColor="red";
+//			$("p").eq(2).css("background-color","red");
+			$("p").eq(2)[0].style.backgroundColor="red";
+			//上述三种结果是一样的
+			
+			//each()表示遍历节点，也叫作迭代符合条件的节点。
+			/*$("p").each(function(){
+				$(this).animate({"width":50*$(this).index()},1000);
+			})*/	
+			$("p").each(function(i){
+				$(this).animate({"width":60*i},1000);
+			})
+				//上述两种都可以
+				
+				//length和size(),如果size()报错。可能是引入的js没有这个
+//			console.log($("p").length);
+            console.log($("p").size());
+		</script>
+	</body>
+</html>

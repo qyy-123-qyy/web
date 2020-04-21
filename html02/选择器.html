@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}                           
+			#a{                            /*  #:id选择器.a:id名 ，id不能重复*/
+				width: 200px;               
+				height: 200px;
+				background-color: red;
+				font-family: 宋体;
+			    text-align: center;
+			    font-size: 16px;
+	            font-style: italic;       /*斜体*/
+			    font-weight: bold;     
+			    text-decoration: underline; /*  下划线*/
+			    /*text-decoration: line-through; */ /*删除线*/
+			    border: 2px; color: ;
+			    margin: auto;                /*margin(外边距): auto(水平居中); 按照上右下左顺序 。不影响大小，影响位置*/
+			    padding: 2px;              /*  padding(内边距):auto(无这个选项) ;按照上右下左顺序,影响盒子大小,不影响位置*/
+			   color: wheat; 
+			}
+			.a{width: 200px;                   /*  .:class（类）选择器.a:class名 ，class可以重复*//*当同一标签id和class同时存在,id级别高于class*/
+				height: 200px;
+				background-color: palegoldenrod;
+			}
+			p{width: 200px;                   /* p.标签选择器;所有p标签的样式都一样*/
+				height: 200px;
+				background-color: palevioletred;
+				margin: 10px;
+			}
+			#c #d p{width: 200px;                   /* p.标签选择器;所有p标签的样式都一样*/
+				height: 200px;
+				background-color: green;
+				margin: 10px;
+			}
+			ul{                                 /* 交集选择器*/
+				width: 500px;
+				/*height: 200px;*/
+				border: 2px solid deeppink;
+			}
+			ul li{
+				width: 100px;
+				height: 100px;
+				background-color: darkcyan;
+				margin: 10px;
+			}
+			.c1{
+				background-color: brown;
+			}
+			ul li.c2{
+				background-color: greenyellow;
+			}
+			/*.paper{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+			}
+				.right{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+			}*/
+			.paper,.right{
+				width: 100px;
+				height: 100px;
+				background-color:black
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="a">
+		MAMAMOO
+		</div>
+		<div class="a">
+			super junior
+		</div>
+		<div id="c">
+			<div id="d">
+				<div id="d">
+					<p>ftisland</p>
+				</div>
+			</div>
+		</div>
+			<p>李洪基</p>
+			<ul>
+				<li class="c1"></li>
+				<li class="c2"></li>
+				<li class="c3"></li>
+				<li class="c1"></li>
+				<li class="c2"></li>
+				<li class="c3"></li>
+			
+			</ul>
+			<div class="right"></div>
+			<p class="paper"></p>
+	</body>
+</html>

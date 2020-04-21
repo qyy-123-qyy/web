@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Preson(name,age){
+			this.name=name;
+			this.age=age
+			}
+			Preson.prototype.sayHello=function(){
+         alert("你好，我是"+this.name+"，我今年"+this.age+"岁了");
+			}
+		var xiaohua=new Preson("小花",21);
+		var xiaowang=new Preson("小王",31);
+		xiaohua.sayHello();
+		xiaowang.sayHello();
+		alert(xiaohua.sayHello==xiaowang.sayHello);
+		</script>
+	</body>
+</html>

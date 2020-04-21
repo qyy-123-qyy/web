@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function Girl(top,left){
+			this.top=top;
+			this.left=left;
+			this.step=step;
+			this.timer=null;
+			this.init=function(){
+				//创建一个div
+				this.dom=document.createElement("div");
+				document.body.appendChild(this.dom);
+				//设置样式
+				this.dom.style.top=this.top+"px";
+				this.dom.style.left=this.left+"px";
+				
+			}
+			//设置方法
+			this.walk=function(){
+				var self=this;
+				this.timer=setInterval(function(){
+					self.left++;
+					self.step++;
+					if(self.left>7){
+						self.step=0;
+					}
+					if(self.left>1000){
+						self.xs();
+					}
+					self.dom.style.left=self.left+"px";
+					self.dom.style.backgroundPosition=-79*self.step+"px-216px";
+				},40)
+			}
+			this.xs=function(){
+				clearInterval(this.timer);
+				document.body.removeChild(this.dom);
+			}
+			this.init();
+			this.walk();
+		}
+//		Girl(200,100);
+         setInterval(function(){
+         	new Girl(Math.random()*400,100);
+         },1000)
+	</script>
+	<body>
+	</body>
+</html>

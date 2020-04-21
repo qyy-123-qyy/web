@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+				#box{
+				width: 80px;
+				height: 80px;
+				background-color: pink;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="start" id="start" value="开始" />
+		<input type="button" name="end" id="end" value="暂停" />
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var start=document.getElementById("start");
+			var end=document.getElementById("end");
+			var nowleft=100;
+			var timer;
+			start.onclick=function(){
+				//设表先关
+				clearInterval(timer);
+				//设置定时器
+				timer=setInterval(function(){
+					nowleft+=10;
+					box.style.left=nowleft+"px";
+				},20)
+			}
+			end.onclick=function(){
+				
+					clearInterval(timer);
+			
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

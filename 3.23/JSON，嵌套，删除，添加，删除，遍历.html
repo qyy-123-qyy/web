@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		/*	var obj={
+				key:value,
+				key:value,
+				key:value,		
+			};*/
+			var obj={
+				"name":"张三",
+				"gender":"男",
+				"age":"18"
+			}
+//			console.log(obj.name);
+//			console.log(obj["age"]);
+//			var aa="gender";
+//			console.log(obj.gender);
+//			console.log(obj[aa]);
+			
+				var obj2={
+				name:"张三",
+				gender:"男",
+				"age":18,
+				heiget:180,
+				hobby:"看书",
+				girlfriend:{
+					name:"小花",
+					hobby:"游泳"
+				}
+			};
+//		console.log(obj2.girlfriend.name);
+//			
+//			obj2.age++;//改变属性值
+//			obj2.school="F大";//添加属性
+//			delete obj2.girlfriend.hobby;//删除
+//			console.log(obj2);
+//			
+			//JSON的遍历
+			for (var i in obj2) {
+			console.log(obj2[i]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

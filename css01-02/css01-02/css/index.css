@@ -1,0 +1,14 @@
+.box {
+	width: 200px;
+	height: 200px;
+	background-color: red!important;
+	/*background-color: red;*/
+}
+
+.box1 {
+	background-color: yellow;
+}
+
+.box2 {
+	background-color: yellowgreen;
+}

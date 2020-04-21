@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.cebian{
+	width: 1226px;
+	height: 460px;
+	background-color: palegoldenrod;
+	margin: auto;
+		position: relative;
+}
+.left{
+	width: 234PX;
+	height: 460px;
+	background-color: pink;
+	float: left;
+}
+.right{
+	width: 992px;
+	height: 460px;
+	background-color: yellow;
+	float: left;
+
+}
+.shouji{
+	width: 234px;
+	height: 420px;
+	background-color: red;
+	padding:20px 0 ;
+}
+.shouji li{
+	height:42px ;
+	width: 204px;
+	background-color:greenyellow;
+	list-style: none;
+	padding-left: 30px;
+	cursor: pointer;
+	line-height: 42px;
+}
+.shouji li:hover{
+	background-color: orange;
+}
+.shouji li:hover .shouji1{
+	display: block;
+}
+.shouji1 {
+	position: absolute;
+	top: 0;
+	left: 234px;
+	height: 420px;
+	width:952px;
+	background-color: blue;
+	border: solid 1px red;
+	padding: 20px 20px ;
+	display: none;
+}
+.remix{
+	width: 230px;
+	height: 420px;
+	background-color: darkred;
+	float: left;
+}
+.remix li{
+	background-image: url(img/26d1de72e958da75048be5c6cc0b73f6.jpg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 200px;
+	background-color: pink;
+	text-indent: 1em;
+	float: left;
+}
+.remix li:hover{
+	color: orange;
+	background-color: white;
+}
+#s{
+	float: right;
+	margin-right: 15px;
+}

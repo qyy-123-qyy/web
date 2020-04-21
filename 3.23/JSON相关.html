@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj={
+				name:"孙悟空",
+				gender:"男",
+				ad:"花果山",
+				peiou:{
+					name:"紫霞仙子",
+					gender:"女",
+					ad:"天上"
+				}
+			};
+//			console.log(obj.peiou.name);
+             obj.peiou.age=18;
+             obj.peiou.age++;
+             delete obj.ad;
+             console.log(obj);
+             for(var i in obj){
+             	console.log(obj[i]);
+             }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

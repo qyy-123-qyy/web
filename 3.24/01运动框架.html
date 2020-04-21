@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var nowleft=100;
+			//从100运动到700需要花费3000毫秒
+			//定时时间为20毫秒，总共要执行3000/20=150次(帧)
+			//150px变化量是600px，每帧变化4px
+			/*var date=new Date();
+			var timer=setInterval(function(){
+				nowleft+=4;
+				if (nowleft>700) {
+					nowleft=700;
+					clearInterval(timer);
+				}
+				box.style.left=nowleft+"px";
+			},20)*/
+			//第二种利用帧编号
+			var target=1000;//要移动的位置
+			var time=10000;//动画总时间
+			var interval=20;//间隔时间
+			//总帧数
+			var maxFrame=time/interval;
+			//步长
+			var step=(target-nowleft)/maxFrame;
+			var frameNumber=0;
+			var timer=setInterval(function(){
+				nowleft+=step;
+				frameNumber++;
+				if (frameNumber==maxFrame) {
+					clearInterval(timer);
+				}
+				box.style.left=nowleft+"px";
+			},interval)
+		</script>
+	</body>
+</html>

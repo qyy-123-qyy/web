@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+	     window.onload=function(){
+	     	var pic=document.getElementById("pic");
+	     		var left=100;
+	     	var top=100;
+	     	function myClick(idStar,fun){
+	     		var btn=document.getElementById("idStar");
+	     		btn.onclick=fun;
+	     	}
+	     
+	     	myClick("btn01",function(){
+	     		left-=10;
+	     		top-=10;
+	     		move();
+	     	});
+	     }
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><input type="button"  id="btn01" value="左上" /></td>
+				<td><input type="button"  id="btn02" value="向上" /></td>
+				<td><input type="button"  id="btn03" value="右上" /></td>			
+			</tr>
+			<tr>
+				<td><input type="button"  id="btn04" value="向左" /></td>
+				<td><input type="button"  id="btn05" value="不变" /></td>
+				<td><input type="button"  id="btn06" value="向右" /></td>			
+			</tr>
+			<tr>
+				<td><input type="button"  id="btn04" value="左下" /></td>
+				<td><input type="button"  id="btn05" value="向下" /></td>
+				<td><input type="button"  id="btn06" value="右下" /></td>			
+			</tr>
+		</table>
+		<img src="../img/timg (1).jpg"/ id="pic" width="300px">
+	</body>
+</html>

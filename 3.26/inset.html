@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="txt" value="" />
+		<input type="button" name="" id="btn" value="点击" />
+		
+		<ul>
+			
+		</ul>
+		<script type="text/javascript">
+			var txt=document.getElementById("txt");
+			var btn=document.getElementById("btn");
+			var ul=document.getElementsByTagName("ul")[0];
+			var lis=ul.getElementsByTagName("li");
+			btn.onclick=function(){
+				//
+				var oli=document.createElement("li");
+				oli.innerHTML=txt.value;
+				ul.insertBefore(oli,lis[0]);
+			}
+		</script>
+	</body>
+</html>

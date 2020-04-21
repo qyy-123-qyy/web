@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				font-size: 18px;
+				line-height: 200%;
+			}
+			.active{
+				border: none;
+				background-color: pink;
+				cursor: pointer;
+				outline: none;
+			}
+			.disable{
+				border: none;
+				background-color: yellowgreen;
+				cursor: no-drop;
+			}
+		</style>
+	</head>
+	<body>
+		<p><input type="button" name="" id="zengda" value="字体增大" class="active"/></p>
+		<p><input type="button" name="" id="jianxiao" value="字体减小"  class="active"/></p>
+		<div id="box">
+			<p>《RWBY》（发音同Ruby）是一部在2013年7月首播的原创网络动画。R、W、B、Y 分别是英语红白黑黄的首字母，代表的分别是四位女主角的主题色。</p>
+		    <p>该作由美国Rooster Teeth Productions（公鸡牙齿）动画工作室RWBY团队制作，原作者兼前导演为已故动画家Monty Oum（蒙特·乌姆）。该作第一季分为3卷（volume）。</p>
+		    <p>本作的背景设定在一个类现代但是充满着超自然力量的世界“树𣎴子”（Remnant）。主要角色为四个拥有各自的特殊能力（外像力）及武器的女孩</p>
+		</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var zengda=document.getElementById("zengda");
+			var jianxiao=document.getElementById("jianxiao");
+			var fs=18;//字体起始值
+			zengda.onclick=function(){
+				fs+=2;
+				if (fs>=30) {
+					fs=30;
+					this.className="disable";
+				}
+				jianxiao.className="active";
+				box.style.fontSize=fs+"px";
+			}
+			jianxiao.onclick=function(){
+				fs-=2;
+				if (fs<=10) {
+					fs=10;
+					this.className="disable";
+				}
+				zengda.className="active";
+				box.style.fontSize=fs+"px";
+				
+			}
+		</script>
+		
+	</body>
+</html>

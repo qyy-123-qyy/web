@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人介绍</title>
+	</head>
+	<body>
+		
+		<form method="get" target="_blank">
+			<h4>个人简介</h4>
+			<p>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" name="xm" value="" maxlength="4" placeholder="请输入您的姓名" required="required">
+		</p>
+		<p>
+			出生年月：<input type="date"  name="csny"/>
+		</p>
+		<p>
+			年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="number" name="nl" max="100" min="0"/>
+		</p>
+		<p>
+			性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio"  name="sex"/ value="男">男
+			<input type="radio"  name="sex"/ value="女">女
+		</p>
+		<p>
+			籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：<select name="jg">
+				<option value="">山西省</option>
+				<option>陕西省</option>
+				<option>北京省</option>
+				<option>天津省</option>
+			</select>
+		</p>
+		<p>
+			毕业时间：<input type="month" name="bysj"   />
+		</p>
+		<p>
+			爱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好：<input type="checkbox" name="hobby" id="ks" value="看书"/><label for="ks">看书</label>
+			<input type="checkbox" name="hobby" id="kdy" value="看电影" /><label for="kdy">看电影</label>
+			<input type="checkbox" name="hobby" id="tyy" value="听音乐"/><label for="tyy">听音乐</label>
+		</p>
+		<p>
+			邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="emile"  name="yx"   >
+		</p>
+		<p>
+			电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：<input type="tel" maxlength="13" name="dh"  />
+		</p>
+		<p>
+			自我介绍：<textarea rows="10px" cols="20px"></textarea>
+		</p>
+		<input type="submit"  value="提交"/>
+		<input type="reset"  value="重置"/>
+	</form>
+	</body>
+</html>

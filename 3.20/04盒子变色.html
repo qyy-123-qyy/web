@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var box=document.getElementById("box");
+			box.onclick=function(){
+				alert("我是box点击的弹框");
+			}
+			box.onmouseover=function(){
+				this.style.backgroundColor="hotpink";
+			}
+			box.onmouseout=function(){
+				this.style.backgroundColor="deeppink";
+			}
+			//得到焦点(onfocus)和失去焦点(onblur)在表单(input)里使用
+			var sr=document.getElementById("sr");
+//			sr.onfocus=function(){
+//				alert("得到焦点");
+//			}
+				sr.onblur=function(){
+					var val=this.value;
+				if(val==""||val==null){
+					alert("请输入正确");
+				}else{
+					alert("输入正确");
+				}
+			}
+		}
+	</script>
+	<body>
+		<div id="box"></div>
+		<input type="text" name="" id="sr" value="" />
+	</body>
+</html>

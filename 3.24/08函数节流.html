@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="点击" />
+		<script type="text/javascript">
+			var btn=document.getElementsByTagName("input")[0];
+			var lock=true;//锁
+			btn.onclick=function(){
+				if (!lock)
+					return;
+					console.log(1);
+					lock=false;
+					setInterval(function(){
+						lock=true;
+					},1000)
+				
+			}
+		</script>
+	</body>
+</html>

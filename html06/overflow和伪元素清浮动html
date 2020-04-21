@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.b{
+				border: 1px red solid;
+				overflow: hidden;
+			}
+			.b p{
+				width: 200px;
+				height: 200px;
+				margin: 10px;
+				background-color: palegoldenrod;
+				float: left;
+			}
+			/*.b::after{
+				display: block;
+				content:"" ;
+				clear: both;
+			}*/
+		</style>
+	</head>
+	<body>
+		 <div class="b">
+                          	<p></p>
+					<p></p>
+							<p></p>
+									<p></p>
+											<p></p>
+													<p></p>
+                          </div>
+	</body>
+</html>

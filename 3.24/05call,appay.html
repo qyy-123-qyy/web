@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj={
+				name:"孙悟空",
+				age:18,
+				gender:"男"
+			};
+				var obj2={
+				name:"沙和尚",
+				age:28,
+				gender:"男"
+			};
+			/*function infrom(){
+				alert(this.name);
+			}
+			//使用call（）this就是call括号里的对象
+			infrom.call(obj);*/
+			function infrom(a,b,c){
+				console.log(this.name);
+				console.log(a+b+c);
+			}
+//			infrom.call(obj,2,3,4);
+            infrom.apply(obj,[2,3,4]);
+            
+            function sayName(){
+            	for(var i=1;i<=5;i++){
+            		console.log(this.name);
+            	}
+            }
+            sayName.call(obj2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

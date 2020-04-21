@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			.banner{
+				width: 960px;
+				height: 360px;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.imglist ul{
+				list-style: none;
+			}
+			.imglist ul li{
+				/*position: absolute;*/
+				display: none;
+			}
+			.imglist ul li img{
+				width: 960px;
+				height: 360px;
+				vertical-align: top;
+			}
+			.imglist ul li.active{
+				display: block;
+			}
+			.slide a{
+				background-repeat: no-repeat;
+				position: absolute;
+				height: 69px;
+	            width: 41px;
+	            background-image: url(../img/icon-slides.png);
+			}
+			.left{
+				top: 145px;
+				background-position: -83px 0;
+			}
+			.right{
+				top: 145px;
+				background-position: -125px 0;
+				right: 0;
+			}
+			.left:hover{
+				background-position: 0 0;		
+			}
+			.right:hover{
+				background-position: -42px 0;		
+			}
+			.point{
+				position: absolute;
+			    left: 445px;
+				bottom: 20px;
+				width: 200px;
+				height: 10px;
+							
+			}
+			/*.point ul{
+				width: 200px;
+				height: 10px;
+			}*/
+			.point ul li{
+				width: 10px;
+				height: 10px;
+				background-color:pink;
+				border-radius: 50%;
+				float: left;
+				margin:0 2px;
+				list-style: none;
+			}
+			.point ul li.active{
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var left=document.getElementById("left");
+				var right=document.getElementById("right");
+				var point=document.getElementById("point").getElementsByTagName("li");
+				var imgList=document.getElementById("imglist").getElementsByTagName("li");
+                 //信号量0 1 2 3 4
+				var imgidx=0;
+			    //右按钮单击响应函数
+			    right.onclick=function(){
+			    	imgidx++;
+			    	if(imgidx>4){
+			    		imgidx=0;
+			    	}
+			    	changePic();
+			    }
+			     left.onclick=function(){
+			    	imgidx--;
+			    	if(imgidx<0){
+			    		imgidx=4;
+			    	}
+			    	changePic();
+			    }
+			
+				//业务函数 根据当前信号量的值，来切换图片
+				function changePic(){
+					//去掉所有图片li的active属性名
+					for(var i=0;i<imgList.length;i++){
+						imgList[i].className="";
+					}
+					//把当前信号量的图片li加上active属性名，让他出现
+					imgList[imgidx].className="active";
+					//去掉所有小圆点li的active，让他们隐藏
+					for(var i=0;i<point.length;i++){
+						point[i].className="";
+					}
+					point[imgidx].className="active";
+				}
+			/*	left.onmouseover=function(){
+					left.style.backgroundPosition="0,0";
+				}
+				left.onmouseout=function(){
+					left.style.backgroundPosition="-83px,0";
+				}*/
+			}
+		</script>
+	</head>
+	<body>
+		<div class="banner" id="banner">
+			<div class="imglist" id="imglist">
+				<ul>
+				<li class="active"><a href=""><img src="../img/banner1.webp"/></a></li>
+				<li><a href=""><img src="../img/banner2.webp"/></a></li>
+				<li><a href=""><img src="../img/banner3.jpg"/></a></li>
+				<li><a href=""><img src="../img/banner4.webp"/></a></li>
+				<li><a href=""><img src="../img/banner5.webp"/></a></li>
+			</div>
+			<a href=""><img src="../img/banner5.webp"/></a></li>
+			</ul>
+			<div class="slide">
+				<a href="" class="left" id="left"></a>
+				<a href="" class="right" id="right"></a>
+			</div>
+			<div id="point" class="point"> 
+				<ul>
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

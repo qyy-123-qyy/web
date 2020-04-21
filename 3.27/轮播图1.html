@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		  #outer{
+		  	width: 520px;
+		  	height: 325px;
+		  	margin: 100px auto;
+		  	background-color: pink;
+		  	padding: 10px 0;
+		  	position: relative;
+		  	overflow: hidden;
+		  }
+		  #imglist{
+		  	list-style: none;
+		  	width: 5000px;
+		  	position: absolute;
+		  	left: 0;
+		  }
+		  #imglist li{
+		  	float: left;
+		  	margin: 0 10px;
+		  }
+		  #imglist li img{
+		  	width: 500px;
+		  	height: 325px;
+		  }
+		  #point{
+		  	position: absolute;
+		  	bottom: 15px;
+		  	left:197.5px ;
+		  }
+		  #point a{
+		  	width: 15px;
+		  	height: 15px;
+		  	float: left;
+		  	background-color:red ;
+		    margin: 0 5px;
+		    opacity: 0.5;
+		    filter: alpha(opacity=50);
+		  }
+		  #point a:hover{
+		  	background-color: black;
+		  }
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var imgList=document.getElementById("imglist");
+				var img=document.getElementsByTagName("img");
+
+				var point=document.getElementById("point");
+				var outer=document.getElementById("outer");  
+
+			    
+			    var index=0;
+			    var allA=document.getElementsByTagName("a");
+			    allA[index].style.backgroundColor="black";
+			    
+			    for (var i=0;i<allA.length;i++){
+			    	allA[i].num=i;
+			    	allA[i].onclick=function(){
+			    		index=this.num;
+			    		imgList.style.left=-520*index+"px";
+		             setA();
+		             move(imgList,"left",-520*index,20,function(){})
+//alert(this.num);
+
+			    	};
+			    }
+			    function setA(){
+			    	for(var i=0;i<allA.length;i++){
+			    		allA[i].style.backgroundColor="";
+			    	}
+			    	allA[index].style.backgroundColor="black";
+			    };
+			}
+		</script>
+	</head>
+	<body>
+	<div id="outer">
+		<ul id="imglist">
+			<li><img src="../img/1.jpg"/></li>
+			<li><img src="../img/2.jpg"/></li>
+			<li><img src="../img/3.jpg"/></li>
+			<li><img src="../img/4.jpg"/></li>
+			<li><img src="../img/5.jpg"/></li>			
+		</ul>
+		<div id="point">
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>	
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="item">
+			
+		</div>
+		<script type="text/javascript">
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					console.log(xhr.responseText);	
+					//将字符串转换为json
+					var response=JSON.parse(xhr.responseText);
+					console.log(response);
+					var aa=response.result.data;
+					console.log(aa);
+					var str="";
+					for(var i=0;i<aa.length;i++){
+						str+=`
+						<div class="item">
+								<img src="${aa[i].thumbnail_pic_s}"/>
+								<h3>${aa[i].author_name}</h3>
+								<p>${aa[i].title}</p>
+						</div>`
+					}
+					document.body.innerHTML=str;
+				}
+			}
+			xhr.open("get","../json/shishang.json",true);
+			xhr.send(null);
+		</script>
+	</body>
+</html>

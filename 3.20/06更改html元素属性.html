@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color:pink;
+				font-size: 40px;
+			}
+			p{
+				border: 1px solid red;
+				font-size: 20px;
+				color: yellow;
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../img/timg (2).jpg" style="width: 300px;" id="pic"/>
+		<a href="https://www.w3school.com.cn/h.asp" id="lianjie">点击</a>
+		<input type="text" id="inp" value="一二三四五" />
+		<div id="box" style="background-color: red; font-size: 40px;" >嘻嘻嘻嘻嘻</div>
+		<p id="hh">哈哈啊哈哈</p>
+		<script type="text/javascript">
+			var pic=document.getElementById("pic");
+			var lianjie=document.getElementById("lianjie");
+			var inp=document.getElementById("inp");
+			//setAttribute
+			pic.src="../img/timg (1).jpg";//相当于pic.setAttribute("src","../img/timg (1).jpg")
+			lianjie.href="https://www.baidu.com/?tn=21002492_6_hao_pg";
+			inp.value="公鸡牙齿";
+			var box=document.getElementById("box");
+			console.log(box.style.backgroundColor);
+			console.log(box.style.fontSize);		
+			var hh=document.getElementById("hh");
+			hh.style.fontSize="30px";
+			hh.style.color="pink";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+.<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+				#box{
+					width: 300px;
+					height: 300px;
+					background-color: pink;
+			
+				}
+				#box1{
+					width: 200px;
+					height: 200px;
+					background-color: plum;
+				}
+				#box2{
+					width: 100px;
+					height: 100px;
+					background-color:paleturquoise;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			奶奶
+			<div id="box1">
+				妈妈
+			  <div id="box2">
+			女儿
+		      </div>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var box1=document.getElementById("box1");
+			var box2=document.getElementById("box2");
+		box1.addEventListener("click",function(){
+//			console.log("妈妈，事件捕获");
+                  alert("妈妈，事件捕获");
+		},true);
+			box.addEventListener("click",function(){
+//			console.log("奶奶，事件冒泡");
+                alert("奶奶，事件冒泡");
+		});
+		box2.addEventListener("click",function(){
+//			console.log("女儿，事件捕获");
+			  alert("女儿，事件捕获");
+		},true);
+	
+		</script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+	</script>
+</html>

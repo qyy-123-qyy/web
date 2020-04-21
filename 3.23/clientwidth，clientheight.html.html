@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				padding: 50px;
+				border: 10px solid pink;
+				margin: 50px;
+			}
+			.box1{
+				padding: 10px 20px 30px 40px;
+				margin: 50px;
+				font-size: 14px;
+				line-height: 200%;
+				border: 50px solid pink;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box1">哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈</div>
+		
+		<script type="text/javascript">
+			var box=document.getElementsByClassName("box")[0];
+            alert(box.clientWidth);
+			alert(box.clientHeight);
+			var box1=document.getElementsByClassName("box1")[0];
+			alert(box1.clientWidth);
+			alert(box1.clientHeight);
+			
+		</script>
+		</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.outer{
+				width: 300px;
+				height: 270px;
+				background-color: pink;
+				padding: 0 30px;
+			}
+			input{
+				height: 32px;
+				width: 248px;
+				padding: 6px 26px;
+				border: 1px solid #333;
+			}
+			p{
+				height: 70px;
+				width: 302px;
+				padding: 10px 0 0;
+				margin: 0;
+			}
+			span{
+				font-size: 12px;
+				color: red;
+				margin-top: 2px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var phone=document.getElementById("phone");
+				phone.onblur=function(){
+					phone.style.border="solid 1px red";
+//					alert("请输入登录名");
+                   var words=document.getElementById("words");
+                   words.innerHTML="请输入登录名";
+				}
+				var password=document.getElementById("password");
+				password.onblur=function(){
+					password.style.border="solid 1px red";
+//					alert("请输入密码");
+                   var word=document.getElementById("word");
+                   word.innerHTML="请输入密码";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="outer">
+		<p>
+			<input type="text" name="" id="phone" value="" placeholder="手机号/邮箱" />
+		    <span id="words"></span>
+		</p>
+		
+		<input type="text" name="" id="password" value=""  placeholder="密码"/>	
+		<span id="word"></span>	
+		</div>
+	</body>
+</html>

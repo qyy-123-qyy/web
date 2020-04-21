@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.content{
+				width: 500px;
+				height: 500px;
+				background-color: palegoldenrod;
+				margin: 100px auto;
+				text-align: center;
+			}
+			h1{
+				color: #333;
+			}
+			.gameView{
+				width: 400px;
+				height: 400px;
+				background-color: yellowgreen;
+				margin: 20px auto;
+			}
+			.colorView{
+				background-color: pink;
+				margin: 1px 0 0 1px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1>找色块</h1>
+		</div>
+		<script type="text/javascript">
+			var content=document.getElementsByClassName("content")[0];
+			var x=2;
+			//创建一个游戏界面
+			function game(){
+				var gameView=document.createElement("div");
+				gameView.className="gameView";
+				content.appendChild(gameView);
+				var s=parseInt(Math.random()*x*x);
+				for (var i=0;i<x*x;i++) {
+					var colorV=colorView(x);
+					if(i==s){
+						colorV.style.opacity=0.5;
+						colorV.onclick=success;
+					}else{
+						colorV.onclick=faile;
+					}
+					gameView.appendChild(colorV);
+				}
+			}
+			game();
+			//创建一个找的快的方法
+			function colorView(x){
+				var colorView=document.createElement("div");
+				var w=400-(1+x);
+				var h=w
+				colorView.style.width=w/x+"px";
+				colorView.style.heigh=h/x+"px";
+				colorView.className="colorView";
+				return colorView;
+			}
+//			colorView();
+              function success(){
+              	x++;
+              	content.removeChild(content.childNodes[3]);
+              	colorView();
+              }
+                  function faile(){
+              	alert("失败");
+              	x=2;
+              	content.removeChild(content.childNodes[3]);
+              	colorView();
+              }
+              
+	</script>
+	</body>
+</html>

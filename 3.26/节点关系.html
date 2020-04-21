@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 200px;
+				height: 50px;
+				background-color: paleturquoise;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="box">
+			<p></p>
+			<p></p><p></p>
+			<p class="aa">我是box里的p标签，我叫aa</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var ps=document.getElementsByTagName("p");
+//			alert(box.childNodes[0].nodeType);
+//          alert(box.childNodes.length);
+//          box.childNodes[3].style.backgroundColor="red";
+            var childs=[];
+            for (var i=0;i<box.childNodes.length;i++) {
+            	 if(box.childNodes[i].nodeType==1){
+            	 	childs.push(box.childNodes[i]);
+            	 }
+            }
+            childs[3].style.backgroundColor="pink";
+//         alert(( ps[2].parentNode).id);
+           ps[2].previousSibling.style.backgroundColor="yellow";
+           ps[2].nextSibling.style.backgroundColor="yellow";
+		  
+		</script>
+	</body>
+</html>

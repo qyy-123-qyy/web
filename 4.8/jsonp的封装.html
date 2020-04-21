@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//URL 路径  callbackname
+			jsonp("json.txt","fun",function(data){
+					console.log(data);
+				})
+			function jsonp(URL,callbackname,callback){
+			window[callbackname]=callback;
+				var scriptObj=document.createElement("script");
+				document.body.appendChild(scriptObj);
+				scriptObj.src=URL;
+				document.body.removeChild(scriptObj);
+			}
+		</script>
+	</body>
+</html>

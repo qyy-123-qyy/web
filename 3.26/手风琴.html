@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width:500px;
+				margin: 100px auto;
+				border: #FF1493 1px solid;
+			}
+			.box ul{
+				list-style: none;
+			}
+			.box ul li.cur h3{
+				/*height: 100px;*/
+				border: black 1px solid;
+			}
+			.content{
+				padding: 10px;
+				font-size: 16px;
+				line-height: 150%;
+				/*display: none;*/
+			}
+			.box ul li.first{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li class="cur first">
+					<h3>今天是星期一<i></i></h3>
+					<div class="content">
+						<p>
+						今天造势昂可是大苏打	
+						今天造势昂可是大苏打								
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//监听h3
+		$(".box ul li h3").click(function(){
+			//所有content合上
+			$(".content").slideUp();
+			//
+			if ($(this).siblings(".content").is(":visible")) {
+				//如果自己的兄弟可见，自己大内容兄弟和尚，为不可见，去掉样式
+				$(this).siblings(".content").stop(true).slideUp();
+				$(this).parents().remove("cur");
+			} else{
+				//反之自己内容兄弟不可见，
+				$(".cur").removeClass("cur");
+				$(this).parents().addClass("cur");
+				$(this).siblings(".content").stop(true).slideDown();
+			}
+		})
+	</script>
+</html>

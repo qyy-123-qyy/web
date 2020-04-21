@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.somecontent{
+				width: 1000px;
+				height: 1232px;
+				margin: auto;
+				background-color: #ccc;
+			}
+			.floor{
+				width: 1000px;
+				margin: auto;
+				height: 400px;
+				margin-bottom: 10px;
+				background-color: yellowgreen;
+			}
+			.f1{
+				height: 433px;
+			}
+			.f2{height: 352px;}
+			.leftNav{
+				position: fixed;
+				bottom: 110px;
+				left: 10px;
+				width: 60px;
+			}
+			.leftNav ul{list-style: none;}
+			.leftNav ul li{
+				width: 60px;
+				height: 60px;
+				background-color: #ccc;
+			}
+			.leftNav ul li a{
+				display: block;
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				text-decoration: none;
+				font-size: 14px;
+			}
+			.leftNav ul li a.number{display: block;}
+			.leftNav ul li a.chinses{display: none;color: white;}
+			.leftNav ul li.cur a.number{display: none;}
+			.leftNav ul li.cur a.chinses{display: block;}
+			.leftNav ul li.cur{background-color: rgb(111,0,0);}
+		</style>
+	</head>
+	<body>
+		<div class="somecontent"></div>
+		<div class="leftNav" id="leftNav">
+			<ul>
+				<li>
+					<a href="javascript:;" class="number">1F</a>
+					<a href="javascript:;" class="chinses">百货</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">2F</a>
+					<a href="javascript:;" class="chinses">男装</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">3F</a>
+					<a href="javascript:;" class="chinses">女装</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">4F</a>
+					<a href="javascript:;" class="chinses">裤子</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">5F</a>
+					<a href="javascript:;" class="chinses">童装</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">6F</a>
+					<a href="javascript:;" class="chinses">运动</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="number">7F</a>
+					<a href="javascript:;" class="chinses">电子</a>
+				</li>
+			</ul>
+		</div>
+		<div class="floor f1"></div>
+		<div class="floor f2" style="background: red;"></div>
+		<div class="floor f3"></div>
+		<div class="floor f4" style="background: aqua;"></div>
+		<div class="floor f5" style="background: gold;"></div>
+		<div class="floor f6" style="background: hotpink;"></div>
+		<div class="floor f7" style="background: lawngreen;"></div>
+		<div class="somecontent"></div>
+		<script type="text/javascript">
+			//左侧导航条的li
+			var leftNavLis=document.getElementById("leftNav").getElementsByTagName("li");
+			/*因为楼层里面的div没有在同一个父级,不能通过getElementsByTagName得到,
+			可以遍历body里面的所有儿子,nodetype属性是1,类型floor*/
+			var floorArr=[];
+			var floorOffertTopArr=[];
+			for (var i=0;i<document.body.childNodes.length;i++) {
+				if (document.body.nodeType==1&&document.body.childNodes.className.indexOf("floor")!=-1) {
+					floorArr.push((document.body.childNodes[i]));//将符合条件的div放进去
+					floorOffertTopArr.push(document.body.childNodes[i].offsetTop);
+				}
+					
+				}
+			var floorArrLength=floorArr.length;
+			//floorOffsetTopArr这个数组里面放着所有class为floor楼层的offsettop的值，
+			//数组最后一项应该是最后一个楼层的下边框距离页面顶部的距离
+			floorOffertTopArr.push(floorArr[floorArrLength-1].clientHeight+floorOffertTopArr[floorArrLength-1]);
+			//当前楼层信号量, NaN表示不再这个楼层里
+			 var nowLeft=NaN;
+			 window.onscroll=function(){
+			 	var scrollTop=document.body.scrollTop||document.documentElement.scrollTop
+			    //判断此时在第几楼层，=判断我们现在的卷动值在正序数组中的第几位
+			for (var i=0;i<floorArrLength;i++){
+				if (screenTop>=floorOffertTopArr[i]-200&&scrollTop<floorOffsetTopArr[i+1]-200) {
+					
+				}
+			} {
+				
+			}
+			 }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

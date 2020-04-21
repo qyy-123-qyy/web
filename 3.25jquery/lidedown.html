@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="button" name="" id="" value="下滑展开" />
+		<input type="button" name="" id="" value="上滑收回" />
+		<input type="button" name="" id="" value="滑动切换" />
+		<div></div>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").eq(0).click(function(){
+				$("div").slideDown(1000);//slideDown下滑展开
+			})
+			$("input:eq(1)").click(function(){
+				$("div").slideUp(1000,function(){
+					alert("1");
+				});//slideDown下滑展开
+			})
+			$("input").eq(2).click(function(){
+				$("div").slideToggle(1000);//slideDown下滑展开
+			})
+		</script>
+	</body>
+</html>

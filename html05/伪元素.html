@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 522px;
+				height: 545px;
+				margin: 10px auto;
+				border: solid 1px red;
+			}
+			.box::after{
+				content:"12";
+				color: cadetblue;
+			}
+			.box::before{
+				content:"34";
+				color: saddlebrown;
+			}
+			.oninput{
+				width:360px;
+				height: 46px;
+				border: solid 1px darkgray;
+				margin: auto;
+			}
+			.oninput::before{
+				content:"";
+				display: block;
+				width: 24px;
+				height: 24px;
+				border: solid red 1px;
+				background-image: url(img/xuebitupng.png);
+				background-repeat: no-repeat;
+				background-position: -400px -206px;
+				float: left;	
+				margin: 11px 10px;
+			}
+			.oninput input{
+				float: left;
+				width: 300px;
+				height: 30px;
+				margin-top: 8px;
+				outline: none;
+				border: none;
+			}
+			.oninput input::-webkit-input-placeholder{
+				color: hotpink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			今天是新其三
+		</div>
+		<p class="oninput">
+      <input type="text" name="" id="" value="" placeholder="用户名"/>
+		</p>
+	</body>
+</html>

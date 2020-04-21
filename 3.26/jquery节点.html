@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<style type="text/css">
+			p{
+				width: 200px;
+				height: 50px;
+				background-color: paleturquoise;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="box">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p class="aa" id="aa">我是box里的p标签，我叫aa</p>
+			<h1>hahah</h1>
+			<h1>hahah</h1>	
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+//				$("#box").children("h1").css("background-color","red");
+//				$("#box").children(":odd").css("background-color","pink");
+//				alert($("#box").children().size());
+//				$("#box").find("p").css("background-color","palegoldenrod");
+//				$("#box").find("*").css("background-color","palevioletred");
+				alert($("#box").children().length);
+				$("#box").appendChild("span");
+			
+			</script>
+		</div>
+</html>

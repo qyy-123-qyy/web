@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 40px;
+				height: 40px;
+				background-color: pink;
+				border-radius: 50%;
+				float: left;
+				margin: 0 10px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1 id="inn"></h1>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+				<script type="text/javascript">
+/*			var ps=document.getElementsByTagName("p");
+			var inn=document.getElementById("inn");
+			
+			for (var i=0;i<ps.length;i++) {
+				ps[i].index=i;
+				ps[i].onmouseover=function(){
+				//第一件所有P变成红色
+				for (var j=0;j<ps.length;j++) {
+					ps[j].style.backgroundColor="pink";
+				}
+				//第二件，自己变成红色
+				this.style.backgroundColor="red";
+				inn.innerHTML=this.index;
+				}	
+			}*/
+						
+			var ps=document.getElementsByTagName("p");
+			var inn=document.getElementById("inn");
+			
+			for (var i=0;i<ps.length;i++) {
+				ps[i].index=i;
+				ps[i].onmouseover=function(){
+				//第一件所有P变成红色
+				for (var j=0;j<ps.length;j++) {
+					ps[j].style.backgroundColor="pink";
+				}
+				//第二件，自己变成红色
+				this.style.backgroundColor="red";
+				inn.innerHTML=this.index;
+				}	
+			}
+		</script>
+	</body>
+</html>

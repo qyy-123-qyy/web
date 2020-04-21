@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var form=document.getElementById("tj");
+				var shoujihao=document.getElementById("shoujihao");
+				var weixin=document.getElementById("weixin");
+				form.onclick=function(){
+					var sjh=shoujihao.value;
+					var wx=weixin.value;
+					if(!/^1[\d]{10}$/.test(sjh)){
+						alert("请输入正确手机号");
+						return false;
+					}
+					if(!/^[\d]{5,11}$/.test(wx)){
+						alert("请输入正确微信号");
+						return false;
+					}
+					alert("登录成功");
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post" id="form">
+			<p>手机号：<input type="text" value="" id="shoujihao"/></p>
+			<p>微信号：<input type="text" value="" id="weixin"/></p>
+			<input type="submit" name="" id="tj" value="提交" />
+			
+		</form>
+	</body>
+</html>

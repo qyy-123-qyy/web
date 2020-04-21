@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fun(){
+				alert("你哈");
+			}
+//			console.log(fun.__proto__())
+       console.log(fun.prototype);
+          function Person(){
+				this.name="小米";
+				this.age=18
+			}
+             Person.prototype={
+             	name:"哈",
+             	gender:"女",
+             	age:18
+             }
+             var xiaomi=new Person();
+           console.log(Person);
+             console.log(xiaomi);
+             console.log(xiaomi.__proto__);
+             console.log(Person.prototype===xiaomi.__proto__);
+             
+//        function Preson(name,age){
+//				this.name=name;
+//				this.age=age
+//			}
+//			var xiaohua=new Preson("小花",21);
+		</script>
+	</body>
+</html>

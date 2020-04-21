@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.top{
+	width: 100%;
+	height: 58px;
+	background-color:#191D3A ;
+}
+.daohang{
+	width: 1000px;
+	height: 58px;
+	/*background-color:pink ;*/
+	margin: auto;
+}
+.daohang img{
+	width: 157px;
+	height: 36px;
+	margin-top: 11px;
+	float: left;
+	cursor: pointer;
+}
+.neirong li{
+	width: 87px;
+	height: 58px;
+	/*background-color: navajowhite;*/
+	list-style: none;
+	float: left;
+	text-align: center;
+	line-height: 58px;
+	font-size: 14px;
+	color:#818496 ;
+	cursor: pointer;
+}
+.neirong li:hover{
+	color: white;
+}
+.neirong li.shouye{
+	background-color: #252947;
+	color: white;
+	margin-left:30px ;
+	
+}
+.neirong li.jiaruwomeng{
+	width: 100px;
+	height: 34px;
+	background-color:#3ACA7A ;
+	color: white;
+	border-radius: 5px;
+	margin-top: 12px;
+	text-align: center;
+	line-height: 34px;
+	margin-left:10px ;
+}
+.yuyan{
+	width: 80px;
+	height: 58px;
+	/*background-color: yellow;*/
+	float: right;
+	text-align: center;
+	line-height: 58px;
+}
+.yuyan span.chinese{
+	color:#3ACA7A ;
+	cursor: pointer;
+}
+.yuyan span.en{
+	color:#555;
+	cursor: pointer;
+}
+.yuyan span.en:hover{
+	color: #3ACA7A ;
+}
+.bander{
+	width: 100%;/*宽度和屏幕宽度一样,不会出现滚动条或没填满屏幕*/
+	height: 460px;
+}
+.bander img{
+	width: 100%;
+	height: 460px;
+}
+.disanhang{
+	width: 1000px;
+	height: 200px;
+	/*background-color: pink;*/
+    margin: 50px auto;
+    }
+.four{
+	width: 218px;
+	height: 200px;
+	    text-align: center;
+	   cursor: pointer;
+	   float: left;
+	   margin-right: 40px;
+}
+.four:hover{
+	background-color: #3ACA7A ;
+	color: white;
+}
+.disanhang img{
+	width: 218px;
+	height: 128px;
+}
+.bofang{
+	font-size: 12px;
+	margin-top: 10px;
+	color: #3ACA7A ;
+}
+.four:hover .bofang{
+	color: white;
+}
+fieldset{
+	border: none;
+  border-top: 1px solid #B5C0CB;
+  margin-top: 20px;
+}
+fieldset p{
+	width: 10px;
+	height: 10px;
+	background-color: #B5C0CB;
+	border-radius: 50%;/*直角变圆角*/
+	float: left;
+	margin:5px;
+}
+fieldset p:hover{
+	background-color:#3ACA7A ;
+}

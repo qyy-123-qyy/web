@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.a{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				position: absolute;/*绝对定位（参考点为可视化窗口*/
+				top: 200px;
+				left: 200px;
+				/*right: 200px;
+				bottom: 200px;*/
+			}
+			.d{
+				width: 200px;
+				height: 200px;
+				background-color: mediumspringgreen;
+				position:relative ;/*相对定位（参考点为本身*/
+				/*top: 200px;
+				left: 200px;*/
+				right: 100px;
+				bottom: 100px;
+			}
+				.s{
+				width: 200px;
+				height: 200px;
+				background-color: hotpink;
+				position:fixed ;/*固定定位（参考点为本可视化窗口。位置不受任何影响*/
+				/*top: 200px;
+				left: 200px;*/
+				right: 100px;
+				bottom: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<div class="s">
+				
+			</div>
+		</div>
+		<div class="d">
+			
+		</div>
+	</body>
+</html>

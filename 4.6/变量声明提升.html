@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//函数声明头的提升不能跨script标签
+			fun();
+			function fun(){
+				alert("我是fun函数");
+			}
+		</script>
+	</body>
+</html>

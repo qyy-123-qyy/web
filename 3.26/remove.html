@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>chif<a href="#">删除</a></li>
+			<li>chif<a href="#">删除</a></li>
+			<li>chif<a href="#">删除</a></li
+		</ul>
+		<script type="text/javascript">
+			var ul=document.getElementsByTagName("ul")[0];
+			var lis=ul.getElementsByTagName("li");
+			var aa=ul.getElementsByTagName("a");
+			for (var i=0;i<aa.length;i++) {
+				aa[i].onClick=function(){
+					ul.removeChild(this.parentNode);
+				}
+			}
+		</script>
+	</body>
+</html>

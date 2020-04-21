@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: springgreen;
+			}
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color:orchid;
+				line-height: 200px;
+				font-size: 24px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box1">今天天气真不错</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var state="springgreen";
+			box.onclick=function(){
+				if (state="springgreen") {
+					state="pink";
+				} else{
+					state="springgreen";
+				}
+				this.style.backgroundColor=state;
+			}
+			var box1=document.getElementById("box1");
+			var str="white";
+			box1.onclick=function(){
+				if (str="white") {
+					str="orange"
+				} else{
+					str="white"
+				}
+				this.style.color=str;
+			}
+			
+			
+		</script>
+	</body>
+</html>

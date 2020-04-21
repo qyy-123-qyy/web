@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>123</li>
+			<li>456</li>
+			<li>789</li>		
+		</ul>
+		<script type="text/javascript">
+			var ul=document.getElementsByTagName("ul")[0];
+			var lis=ul.getElementsByTagName("li");
+			ul.appendChild(lis[0].cloneNode(true));
+		</script>
+	</body>
+	
+</html>

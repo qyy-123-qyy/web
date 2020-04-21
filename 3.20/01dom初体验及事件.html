@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom初体验</title>
+		<script type="text/javascript">
+		window.onload=function(){
+			var pic=document.getElementById("pic");
+			pic.src="../img/timg.jpg";
+			pic.title="ruby";
+			var h=document.getElementsByTagName("h1");
+			h[2].innerHTML="yang xiao long";
+			var box=document.getElementById("box");
+			box.style.backgroundColor="pink";
+			box.style.width="300px";
+			//onmouseove鼠标移入
+			box.onmouseover=function(){
+				box.style.backgroundColor="yellowgreen";
+			}
+			//onmouseout鼠标移出
+			box.onmouseout=function(){
+				box.style.backgroundColor="deepskyblue";
+			}
+			alert(document.title);
+			var inp=document.getElementById("ipu");
+			//onfocus得到焦点
+			inp.onfocus=function(){
+				ipu.style.backgroundColor="pink";
+			}
+			//onblur 元素失去焦点
+			ipu.onblur=function(){
+				ipu.value="哈哈哈";
+			}
+		}
+		</script>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../img/timg (1).jpg" title="ruby" id="pic" style="width: 300px;"/>
+		<h1>ruby rose</h1>
+		<h1>ruby rose</h1>
+		<h1>ruby rose</h1>
+		<h1>ruby rose</h1>
+		<div id="box"></div>
+		<input type="text" id="ipu" value="" />
+	</body>
+</html>

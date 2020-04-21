@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.yixing{
+				width: 670px;
+				height: 221px;
+				background-image: ;
+				margin: 100px auto;
+				border: red 1px solid;
+				position: relative;
+			}
+			.yixing ul li{
+				list-style: none;
+				position: absolute;
+			}
+			.yixing ul li img{
+				width: 100%;
+				height: 100%;
+			}
+			.yixing ul li.stateA{width: 55px;height: 37px;left: -56px;top: 84px;}
+			.yixing ul li.stateG{width: 55px;height: 37px;left: 678px;top: 68px;}
+			.yixing ul li.stateB{width: 71px;height: 54px;left: 16px;top: 67px;}
+			.yixing ul li.stateF{width: 71px;height: 54px;left: 583px;top: 67px;}
+			.yixing ul li.stateC{width: 122px;height: 86px;left: 436px;top: 16px;}
+			.yixing ul li.stateE{width: 122px;height: 86px;left: 247px;top: 16px;}
+			.yixing ul li.stateD{width: 161px;height: 112px;left: 583px;top: 67px;}
+			.rightbtn{
+				position: absolute;
+				top: 151px;
+				width: 40px;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="yixing">
+			<ul>
+				<li class="stateA"><img src="../img/0.png"/></li>
+				<li class="stateB"><img src="../img/1.png"/></li>
+				<li class="stateC"><img src="../img/2.png"/></li>
+				<li class="stateD"><img src="../img/3.png"/></li>
+				<li class="stateE"><img src="../img/7.png"/></li>
+				<li class="stateF"><img src="../img/5.png"/></li>
+				<li class="stateG"><img src="../img/6.png"/></li>				
+				<input type="button"  id="rightbtn" value="" />
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var lis=document.getElementsByTagName("li");
+			var rightbtn=document.getElementsById("rightbtn");
+			var arr=[];
+			//把所有的状态推到数组里
+			for(var i=0;i<lis.length;i++){
+				arr.push({
+				"width":parseInt(fetchComputeredStyle(lis[i],"width"))
+				"height":parseInt(fetchComputeredStyle(lis[i],"height"))
+				"left":parseInt(fetchComputeredStyle(lis[i],"left"))
+				"top":parseInt(fetchComputeredStyle(lis[i],"top"))
+				})
+			}
+			console.log(arr);
+		</script>
+	</body>
+</html>

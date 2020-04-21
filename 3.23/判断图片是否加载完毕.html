@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../img/0.png"/>
+		<img src="../img/1.png"/>
+		<img src="../img/2.png"/>
+		<img src="../img/3.png"/>
+		<img src="../img/5.png"/>
+		<img src="../img/6.png"/>
+		<img src="../img/7.png"/>
+		
+		
+		<script type="text/javascript">
+			var imgs=document.getElementsByTagName("img");
+			//判断所有图片加载完毕，相当于一个计数器，一个图片加载完毕后就记一下数
+			//计数器和总数相同，图片加载完毕
+			var count=0;
+			for(var i=0;i<imgs.length;i++){
+				imgs[i].onload=function(){
+					count++;
+					if(count==imgs.length){
+						alert("图片加载完毕");
+					}
+			}
+				}
+			
+			
+		</script>
+	</body>
+</html>

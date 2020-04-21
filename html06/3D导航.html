@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav{
+				width: 1000px;
+				height: 40px;
+				margin: auto;
+				background-color: pink;
+			}
+			.nav ul li{
+				width: 200px;
+				height: 40px;
+				list-style: none;
+					text-align: center;
+				line-height: 40px;
+				float: left;
+			}
+			.nav ul li:hover .meau{
+				transform: rotateX(-90deg);
+			}
+			.nav ul li a{
+				display: block;
+				height: 40px;
+			}
+			.meau{
+				width: 200px;
+				height: 40px;
+				position: relative;	
+				transition: all 2s;
+			
+					transform-style: preserve-3d;
+			}
+			.meau span{
+				width: 200px;
+				height: 40px;
+				position: absolute;
+				display: block;
+				
+			}
+			
+			#chinese{
+				background-color: aquamarine;
+				/*display: block;*/
+				z-index: 1;
+				transform: translateZ(20px);
+			}
+			#english{
+				background-color: beige;
+				transform: rotateX(90deg) translateZ(20px) ;
+				/*display: block;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">
+						<div class="meau">
+							<span id="chinese">关于</span>
+							<span id="english">about</span>						
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">
+						<div class="meau">
+							<span id="chinese">关于</span>
+							<span id="english">about</span>						
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">
+						<div class="meau">
+							<span id="chinese">关于</span>
+							<span id="english">about</span>						
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">
+						<div class="meau">
+							<span id="chinese">关于</span>
+							<span id="english">about</span>						
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">
+						<div class="meau">
+							<span id="chinese">关于</span>
+							<span id="english">about</span>						
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

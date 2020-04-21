@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj={
+				name:"孙悟空",
+				gender:"男",
+				age:18,
+				sayHello:function(){
+					alert("我的名字是"+this.name);
+					alert("我的性别是"+this.gender);
+					alert("我的年龄是"+this.age);
+					
+					
+				},
+				zhangda:function(){
+                        this.age++;
+				},
+				bianxing:function(){
+					if (this.gender=="男") {
+						this.gender=="女";
+					} else{
+						this.gender=="男";
+					}
+				}
+			};
+		
+			obj.zhangda();
+			obj.zhangda();
+			obj.zhangda();
+			obj.bianxing();
+			obj.bianxing();	
+			obj.bianxing();	
+			
+			console.log(obj.sayHello());
+		</script>
+	</body>
+</html>

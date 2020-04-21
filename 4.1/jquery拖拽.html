@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			#box{
+				width: 600px;
+				height: 600px;
+				background-color: pink;
+				position: relative;
+				margin: 100px auto;
+			}
+			p{
+				width: 60px;
+				height: 60px;
+				background-color: plum;
+				position:absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p></p>
+		</div>
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("p").draggable({
+				containment: "parent",	//在父盒子中拖拽
+//           	grid : [100],			//步长
+             	drag : function(event, ui){  //事件，值就是ui.position.top
+		console.log(ui.position.left,ui.position.top);}
+			});
+//			$(".box").resizable();
+		</script>
+	</body>
+</html>

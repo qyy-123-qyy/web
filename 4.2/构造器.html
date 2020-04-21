@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Dog(){
+				
+			}
+			console.log(Dog.prototype.constructor);
+			console.log(Dog.constructor);
+			
+			var obj=new Dog();
+			console.log(obj.__proto__.constructor);
+			console.log(obj.constructor);
+			console.log(obj.constructor==Dog.prototype.constructor);
+			console.log(Object.prototype.__proto__);//null
+		</script>
+	</body>
+</html>

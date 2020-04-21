@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#outside{
+				width: 304px;
+				border-top: 2px solid #333;
+				margin: 100px auto;
+				
+			}
+			.hd{
+				width: 100%;
+				height: 40px;
+			
+			}
+			.hd span{
+				float: left;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				border-left: 1px solid #cfcfcf;
+				border-bottom: 1px solid #cfcfcf;
+			    line-height: 40px;
+			    background-color: palegoldenrod;
+			    
+			}
+             .hd span.content:hover{
+             	background-color: pink;
+             }
+			.hd span.last{
+				border-right: 1px solid #cfcfcf;
+			}
+			.hd span a{
+				text-decoration: none;
+				color: #333;
+			}
+			img{
+				width: 304px;
+			}
+			.bd div{
+				display: none;
+			}
+			.bd div.content{
+				display: block;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="outside">
+			<div class="hd">
+			<span class="content"><a href="">第一张</a></span>
+			<span><a href="">第二张</a></span>
+			<span class="last"><a href="">第三张</a></span>
+		    </div>
+		    <div class="bd">
+		    <div class="content"><img src="../img/0.png"/></div>
+		    <div><img src="../img/1.png"/></div>
+		    <div><img src="../img/2.png"/></div>
+		    </div>
+		  	    
+		</div>
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".hd span").click(function(){
+					$(this).addClass("content").siblings().removeClass("content")
+				    var index=$(this).index();
+				    　$(this).parent().siblings().children().eq(index).addClass("content").siblings().removeClass("active");
+				})
+			})
+			//				var index=$(this).index();
+//				var li=$(".content li").eq(index);
+//				li.siblings().removeClass("show");
+//				li.addClass("show");
+		
+		</script>
+	</body>
+</html>

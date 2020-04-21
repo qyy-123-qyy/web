@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function sort(element){
+				for(var i=0;i<element.length-1;i++){
+							for (var j=0;j<element.length;j++){
+					if (element[j]>element[j+1]){
+						var swap=element[j];
+						element[j]=element[j+1];
+						element[j+1]=swap;
+					}
+					
+				}
+				}
+		
+				console.log(element);
+			}
+			var arr=[8,18,27,6,85,94,-3,72,21];
+			sort(arr);
+//			var narr=sort(arr);
+//			console.log(narr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

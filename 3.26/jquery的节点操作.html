@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<p>pppp</p>
+		</div>
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var obj=$("<p>哈哈哈</p>")
+			obj.css("background-color","red");
+			$(".box").append(obj);
+			$(".box").append("<span>我是span</span>");
+			$("<span>哈哈哈哈哈啊</span>").appendTo(".box");
+			$(".box").prepend("<h1>我是h1</h1>")//添加第一个儿子
+			$("<h3>我是h3</h3>").prependTo(".box")
+			$("p").after("<h3>我是p标签里的后h3</h3>")
+			$("p").before("<h3>我是p标签里的前h3</h3>")
+			
+		</script>
+	</body>
+</html>

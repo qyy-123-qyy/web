@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 1200px;
+				height: 600px;
+				border: 1px red solid;
+				position: relative;
+			}
+			#boll{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background-color: pink;
+				position: absolute;
+			    top: 484px;
+			    left:770px ;
+			}
+		#block{
+				width: 160px;
+				height: 20px;
+				background-color: plum;
+				position: absolute;
+			    top: 530px;
+			    left:700px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h1 id="fs">分数</h1>
+		<input type="button" name="btn" id="btn" value="开始游戏" />
+		<div id="block"></div>
+		<p id="boll"></p>
+		</div>
+		
+			<script type="text/javascript">
+		var block=document.getElementById("block");
+		var boll=document.getElementById("boll");
+		var box=document.getElementById("box");	
+		var btn=document.getElementById("btn");
+		var h=document.getElementById("fs");
+//		btn.onclick=function(){
+			var L=5;
+			var T=5;
+			block.onmousedown=function(){
+				box.onmousemove=function(event){
+					event=event||window.event;
+                 var el=event.clientX-block.offsetLeft;
+                 var et=event.clientY;
+                 block.style.left=el+"px";
+				}
+				
+			};
+			setInterval(function(){
+				//小球移动
+		    var bl=boll.offsetLeft+L;
+		    var bt=boll.offsetTop+T;
+		    if (bl>=box.offsetWidth-boll.offsetWidth) {
+		    	bl=box.offsetWidth-boll.offsetWidth;
+		    	L*=-1;
+		    }else if(bl<0){
+		    	bl=0;
+		    	L*=-1;		    	
+		    }
+		    if (bt>=box.offsetTop-boll.offsetTop) {
+		    	bt=box.offsetTop-boll.offsetTop;
+		    	T*=-1;
+		    }else if(bt<0){
+		    	bt=0;
+		    	T*=-1;		    	
+		    }
+		    boll.style.left=bl++;
+		    boll.style.top=bt++;
+		    
+			},20)
+	//		}
+	</script>
+</body>
+			
+
+</html>

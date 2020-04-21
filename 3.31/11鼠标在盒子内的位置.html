@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 400px;
+				height: 400px;
+				background-color: plum;
+				margin: 100px ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			box.onmousemove=function(event){
+				event=event||window.event;
+				var scrollTop=document.body.scrollTop||document.documentElement.scrollTop
+				var x=event.clientX-(getAllLeft(box));
+				var y=event.clientY-(getAllTop(box)-scrollTop);
+				box.innerHTML=x+" "+y;
+					//返回这个元素在页面的净位置，就是这个元素的所有offsetparent的offsetTop值的和
+			function getAllTop(obj){
+				//累加器 offsetTop的值
+				var allTop=obj.offsetTop;
+				var currentObj=obj;//当前计算高度的元素
+				while(currentObj==currentObj.offsetParent){
+					allTop+=currentObj.offsetTop;
+				}
+				return allTop;
+			}
+				//返回这个元素在页面的净位置，就是这个元素的所有offsetparent的offsetTop值的和
+			function getAllLeft(obj){
+				//累加器 offsetTop的值
+				var allLeft=obj.offsetLeft;
+				var currentObj=obj;//当前计算高度的元素
+				while(currentObj==currentObj.offsetParent){
+					allLeft+=currentObj.offsetLeft;
+				}
+				return allLeft;
+			}
+			}
+		</script>
+	</body>
+</html>

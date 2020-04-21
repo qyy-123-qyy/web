@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="oh">====</h1>
+		<input type="button" name="btn" id="btn" value="点我" />
+		<script type="text/javascript">
+			var btn=document.getElementById("btn");
+			var oh=document.getElementById("oh");
+			btn.onclick=function(){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if (xhr.readyState==4) {
+						console.log(xhr.responseText);
+					}
+					}
+				xhr.open("post","../json/caijing.json",true);//true表示异步
+				//name="张三" age=18 
+				//post请求对头部请求Content-Type  application/x-www-form-urlencoded模拟表单
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send("name="+encodeURIComponent("张三")+"$age=18");
+				
+			};
+		</script>
+	</body>
+</html>

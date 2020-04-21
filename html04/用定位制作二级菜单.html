@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.yijidaohang{
+				width: 800px;
+				height: 300px;
+				border: 1px solid red;
+				margin: 20px auto;
+				position: relative
+				
+			}
+			.yijidaohang ul{
+				list-style: none;	
+				width: 100px;
+				height: 300px;
+				background-color: pink;		
+			}
+			.yijidaohang ul li{
+				height: 50px;
+               /*width: 100%;*/
+               background-color: palegreen;
+               cursor: pointer;
+				width: 100px;
+               
+			}
+			.yijidaohang ul li:hover{
+				color: white;
+				background-color: black ;}
+			 .erjidaohang {
+					margin-left: 100px;
+					/*position: absolute;
+					left: 100px;
+					top: 0;*/
+					display: none;
+					position: absolute;
+					top: 0;
+					color: blue;
+					height: 50px;
+					/*width: 50px;*/
+
+				}
+				.yijidaohang ul li .erjidaohang li{
+					background-color: goldenrod;
+					width: auto;
+					
+				}
+				.yijidaohang ul li:hover .erjidaohang{
+					display: block;
+					/*color: paleturquoise;*/
+				}
+				.yijidaohang ul li .erjidaohang li:hover{
+					color: pink;
+				}
+		
+		</style>
+	</head>
+	<body>
+		<div class="yijidaohang">
+			<ul>
+				<li>
+			一级菜单
+				<ul class="erjidaohang">
+					<li>二级菜单地方了双方克里斯</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					
+				</ul>
+				</li>
+				<li>一级菜单</li>
+				<li>一级菜单</li>
+				<li>一级菜单</li>
+				<li>
+					一级菜单
+				<ul class="erjidaohang">
+					<li>三级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					
+				</ul>
+				</li>
+				<li>一级菜单</li>	
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.nav_ul{
+				width: 750px;
+				height: 40px;
+				background-color: yellowgreen;
+				margin: 50px auto;
+				list-style: none;
+			}
+			.nav_ul li{
+				width: 100px;
+				height: 40px;
+				background-color: red;
+				/*color: #ffffff;*/
+				/*display: inline-block;*/
+				float: left;
+				text-align: center;
+				line-height: 40px;
+				border-radius:8px ;
+				margin: 0 10px;
+			}
+			.nav_ul li a{
+				color: #ffffff;
+				text-decoration: none;
+				display: block;
+				/*width: 100px;
+				height: 40px;*/
+			}
+			.nav_ul li:hover{
+				background-color: green;
+			}
+			.nav_ul li:hover .two_nav{
+				display: block;
+			}
+			.two_nav{
+				width: 100px;
+				/*height: 300px;*/
+				background-color: palegreen;
+				display: none;/*隐藏*/
+			}
+			.two_nav p{
+				width: 100px;
+				height: 40px;
+				border-bottom: 1px dotted #aaa; 	
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav_ul">
+			<li>
+				<a href="#">导航一</a> 
+				<div class="two_nav">
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+				</div>
+			</li>
+			<li> <a href="#">导航一</a> </li>
+			<li> 
+				<a href="#">导航一</a> 
+				<div class="two_nav">
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+				</div>
+			</li>
+			<li> 
+				<a href="#">导航一</a> 
+				<div class="two_nav">
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+					<p>二级菜单</p>
+				</div>
+			</li>
+			<li> <a href="#">导航一</a> </li>
+			<li> <a href="#">导航一</a> </li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				position: absolute;
+				display: none;
+			}
+			.no0{top: 110px;left: 110px;}
+			.no1{top: 220px;left: 220px;}
+			.no2{top: 130px;left: 230px;}
+			.no3{top: 310px;left: 90px;}
+			.no4{top: 250px;left: 40px;}
+			
+		</style>
+	</head>
+	<body>
+		<img src="../img/0.png" class="no0"/>
+		<img src="../img/1.png" c2lass="no1"/>
+		<img src="../img/2.png" class="no2"/>
+		<img src="../img/3.png" class="no3"/>
+		<img src="../img/5.png" class="no4"/>
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("img").each(function(i){
+				$(this).delay(1000*i).fadeIn(1000);
+			})
+		</script>
+	</body>
+</html>

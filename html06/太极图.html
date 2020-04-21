@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: powderblue;
+			}
+			.taiji{
+				height: 400px;
+				width: 400px;
+				border:solid 1px black;
+				margin: 100px auto;
+				border-radius:50%;
+				animation: zhuan 4s infinite linear;
+			}
+			@keyframes zhuan{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			.hei{
+				height: 200px;
+				widows: 400px;
+				background-color: black;
+				border-radius: 200px 200px 0 0;
+				position: relative;
+			}
+			.bai{
+				background-color: white;
+				transform: rotate(180deg);
+			}
+			.xiaohei{
+				height: 200px;
+				width: 200px;
+				background-color: black;
+				border-radius: 50%;
+				position: absolute;
+				right: 0;
+				top: 100px;
+				z-index: 1;
+			}
+			.xxbai{
+				width: 40px;
+				height: 40px;
+				background-color: white;
+				border-radius: 50%;
+				margin: 80px 80px;
+			}
+			.xxhei{
+				background-color: black;
+			}
+              .xiaobai{
+              	background-color: white;
+              }
+		</style>
+	</head>
+	<body>
+		<div class="taiji">
+			<div class="hei">
+				<div class="xiaohei">
+					<div class="xxbai"></div>
+				</div>
+			</div>
+			<div class="hei bai">
+				<div class="xiaohei xiaobai">
+					<div class="xxbai xxhei"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

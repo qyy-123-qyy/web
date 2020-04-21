@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			var arr=[];
+//			//徍数组里添加三个匿名函数
+//			arr.push(function(){
+//				alert("第一");
+//			});
+//			arr.push(function(){
+//				alert("第二");
+//			})
+//			arr.push(function(){
+//				alert("第三");
+//			})
+//			arr[0]();
+//			var arr2=[];
+//			arr2.push(function(a,b){
+//				alert(a+b);
+//			})
+//			arr2[0](2,2);
+             
+//     var arr=[];
+//     for(var i=0;i<10;i++){
+//     	arr[i]=function(){
+//     		alert("你好");
+//     	}
+//     }
+//     arr[2]();
+//     arr[4]();
+       
+       //经典案问题
+//     var arr=[];
+//     for(var i=0;i<10;i++){
+//     	arr[i]=function(){
+//     		alert(i);//试让那个函数弹出对应的编号，每次弹出都是10
+////     		console.log(i);
+//     	};
+//     }
+//   arr[2]();
+//   arr[4]();
+      //解决方法一
+//     var arr=[];
+//     for(let i=0;i<10;i++){
+//     	arr[i]=function(){
+//     		alert(i);//试让那个函数弹出对应的编号，每次弹出都是10
+////     		console.log(i);
+//     	};
+//     }
+//      arr[2]();
+//      arr[4]();
+
+             //解决方法二
+             var arr=[];
+             for(var i=0;i<10;i++){
+             	(function(m){
+             		arr[m]=function(){
+             			alert(m);
+             			
+             		}
+             	})(i)
+             }
+             arr[2]();
+             arr[8]();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

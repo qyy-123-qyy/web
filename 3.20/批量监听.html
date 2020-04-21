@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				float: left;
+				margin: 0 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<script type="text/javascript">
+//			var ps=document.getElementsByTagName("p");
+//			for(var i=0;i<ps.length;i++){
+//				ps[i].onclick=function(){
+//					this.style.backgroundColor="orange";
+//				}
+//			}
+			//批量监听的闭包问题
+			
+//			var ps=document.getElementsByTagName("p");
+//			for(var i=0;i<ps.length;i++){
+//				ps[i].onclick=function(){
+//					alert(i);
+//				}
+//			}
+			//解决方法一
+			/*var ps=document.getElementsByTagName("p");
+			for(var i=0;i<ps.length;i++){
+				(function(m){	
+				ps[m].onclick=function(){
+					alert(m);
+				}
+				})(i);
+			}*/
+			//方法二
+		/*	var ps=document.getElementsByTagName("p");
+		for(let i=0;i<ps.length;i++){
+				ps[i].onclick=function(){
+					alert(i);
+				}
+		}*/
+		//方法三
+			var ps=document.getElementsByTagName("p");
+		for(var i=0;i<ps.length;i++){
+			 ps[i].index=i;
+				ps[i].onclick=function(){
+					alert(this.index);
+				}
+		}
+		</script>
+	</body>
+</html>

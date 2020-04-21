@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 5000px;
+				background-image: -webkit-linear-gradient(top,red,orange,yellow,blue,pink,white);
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="冲呀" />
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").click(function(){
+				$("body,html").animate({
+					"scrollTop":5000
+				},1000);
+			})
+		</script>
+	</body>
+</html>

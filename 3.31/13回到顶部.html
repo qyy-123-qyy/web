@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 5000px;
+				background-color: plum;
+			}
+			.back{
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				text-align: center;
+				line-height: 100px;
+				box-shadow:0 0 0 5px #000000 ;
+				right: 10px;
+				bottom: 20px;
+				cursor: pointer;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="back">
+			回到顶部
+		</div>
+		<script src="../js/animate-2.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var back=document.getElementsByClassName("back")[0];
+			window.onscroll=function(){
+				var scr=document.body.scrollTop||document.documentElement.scrollTop;
+				if(scr>500){
+					back.style.display="block";
+				}else{
+					back.style.display="none";
+					
+				}
+			}
+			back.onclick=function(){
+			document.body.scrollTop=document.documentElement.scrollTop=0;
+			}
+//			back.onclick=function(){
+//			var dh=body.scrollTop=document.documentElement.scrollTop;
+//			
+//			animate(back,{"top":0},1000,function(){
+//				 dh=0;
+//			});
+//			}
+		</script>
+	</body>
+</html>

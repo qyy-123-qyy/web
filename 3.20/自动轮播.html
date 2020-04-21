@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="../img/1.jpg" style="width: 300px;" id="pic"/>、	
+		</div>
+		<script type="text/javascript">
+			var pic=document.getElementById("pic");
+			var index=1;
+			function time(){
+				if(index==4){
+					index=1;
+				}
+				pic.src="../img/"+index+".jpg";
+			}
+			setInterval(time,1000);
+		</script>
+	</body>
+</html>

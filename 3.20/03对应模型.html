@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width:50px;
+				height: 50px;
+				background-color:pink ;
+				margin: 10px;
+				float:left ;
+			}
+		div{
+			width: 280px;
+			height: 70px;
+			border:1px solid red ;
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box").getElementsByTagName("p");
+				var box1=document.getElementById("box1").getElementsByTagName("p");
+                       //方法一
+/*					for (var i=0;i<box.length;i++){
+						 box[i].index=i;
+						box[i].onclick=function() {
+							box1[this.index].style.backgroundColor="red";
+						}
+					}	*/
+					//方法二IIFE
+					
+			for (var i=0;i<box.length;i++) {
+				(function(m){
+					box[m].onclick=function(){
+						box1[m].style.backgroundColor="red";
+				}
+			})(i);
+				}
+			}
+					
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>		
+		</div>
+		<div id="box1">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>		
+		</div>
+	</body>
+</html>

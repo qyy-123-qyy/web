@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords"  content=""/><!--网页查找关键词-->
+		<meta name="description"  content=""/><!--简单描述网页-->
+		
+		<title>表单</title>
+		<style type="text/css">
+			textarea{
+				resize: none;
+			}           /*  禁止文本域变化      */
+			#yx{
+				outline: none;
+			}/*选定框外无蓝色框*/
+		</style>
+	</head>
+	<body>
+		<form method="get" target="_blank">
+		<fieldset>
+			<legend align="center">输入型控件</legend>
+			姓名：<input type="text" name="xm" value="" placeholder="请输入您的姓名" <!--size="20px"(20px输入框默认尺寸)-->  /><br />
+			密码：<input type="password" name="mm" value="" maxlength="10" <!--maxlength字符长度--> ><br />
+			文本域：<textarea cols="30px" rows="10Px" />文本域</textarea><br /><!--disabled="disabled/无/ture"禁止,数据不传到后台--> <!--readonly只读。数据传到后台-->
+			时间：<input type="datetime" name="sj" value=""/><br />
+			邮箱：	<input type="email" name="yx" id="yx" value=""  required="required" /><br /><!--required="readonly/ture/无"为必填字段-->
+			段落：<p></p>
+			数字：<input type="number"  name="shuzi"/ ><br />
+			搜索：<input type="search" name="sousuo"/>
+			电话:<input type="tel" name="dianhua"/>
+			网址：<input type="url" name="wangzhi"/>
+		</fieldset>
+		<fieldset>
+			<legend align="center">选择型控件</legend>
+			姓别：<input type="radio" name="sex" value="男" checked="checked"/>男 <!--checked表示默认选择-->
+			<input type="radio" name="sex" value="女"/>女<br />
+			爱好：<input type="checkbox" name="hobby" value="运动" id="yundong"/><label for="yundong">运动</label>
+		<input type="checkbox" name="hobby" value="学习" id="xuexi" /><label for="xuexi">学习</label><!--lable标签用于点击复选框的内容就可以选择，lable里id等于checkbox里的id-->
+			<input type="checkbox" name="hobby" value="唱歌" id="changge"/><label for="changge">唱歌</label><br />
+			时间：<input type="date" name="sj" value=""/><br />
+			时间：<input type="datetime-local" name="shijian" value=""/><br />
+			时间：<input type="time" name=""/>
+			籍贯;<select name="jg"><option>陕西</option>
+				<option>北京</option>
+				<option>天津</option>
+				<option>四川</option>
+			</select><br />
+			周：<input type="week"  name="week"/><br />
+				月：<input type="month"  name="month"/><br />
+				颜色：<input type="color" name="color" /><br />
+		范围：<input type="range"  name="" id="" value="0"/>		<!--范围0到100，默认五十-->	
+		</fieldset>
+		<fieldset><legend align="center">事件型控件</legend>
+			<input type="button" name=""  value="按钮"/>
+					<input type="submit" name="" value="提交" />
+							<input type="reset" name="" value="重置"/>
+		 文件：<input type="file" name=""/>
+		 <img src="img/1.jpg  cols="150px" rows="170Px/>
+		</fieldset>
+					</form>
+	</body>
+</html>

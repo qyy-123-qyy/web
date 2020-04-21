@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				width: 700px;
+				height: 100px;
+				margin: 20px auto;
+				background-color: #999999;
+			}
+			
+			.daohang li {
+				width: 100px;
+				height: 50px;
+				background-color: aquamarine;
+				float: left;
+				list-style: none;/*去掉列表前的点*/
+				text-align: center;
+				line-height: 50px;
+				margin-top: 25px;
+				margin-left: 10px;
+				border-radius: 10px;
+			}
+			
+			.daohang li:hover {
+				background-color: darkgreen;
+				cursor: pointer;
+			}
+			
+			.daohang li a {
+				text-decoration: none;
+				color: white;
+				display: block;/*使a标签变成块级元素,拥有宽高,宽高继承他的父级li,点击宽高也能使a里的文字触发事件及文字改变颜色*/
+			}
+			
+			.daohang li a:hover {
+				color: black;
+			}
+			.erjidaohang{
+				width: 100px;
+				/*height: 300px;*/
+				background-color: hotpink;
+				display: none;/*隐藏*/
+		}
+		.daohang ul li:hover .erjidaohang{
+			display: block;/*使隐藏的二级菜单点击一级菜单显示出来*/
+		}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="daohang">
+			<ul>
+				<li>
+					<a href="#">首页</a>
+					<div class="erjidaohang">
+					<p >二级菜单</p>
+					<p >二级菜单</p>
+					<p>二级菜单</p>	
+					</div>
+					
+				</li>
+				<li>
+					<a href="#">首页</a>
+					<div class="erjidaohang">
+					<p >二级菜单</p>
+					<p >二级菜单</p>
+					<p>二级菜单</p>	
+					</div>
+				</li>
+				<li><a href="#">关于</a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+			</ul>
+		</div>
+	</body>
+
+</html>

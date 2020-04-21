@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				width: 1000px;
+				overflow: hidden;
+				margin: 50px auto;
+				border: 1px solid red;
+			}
+			.item{
+				/*height: 100px;*/
+				padding: 10px;
+				line-height: 30px;
+				border-bottom: 1px dashed #ccc;
+			}
+			.item p:nth-child(1){
+				color: red;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.item p:nth-child(1):hover{
+				text-decoration: underline;
+				color: black;
+			}
+			.item p:nth-child(2){
+				font-size: 18px;
+				color: yellowgreen;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var $={
+				ajax:function(options){
+//					console.log(options);
+					//封装url
+					var url=options.url;//得到地址
+					if(url===undefined){
+					//throw new Error()抛出异常
+					throw new Error("ajax必须要写url");
+					return;
+					}
+					//封装类型
+					var type=options.type||"get";//默认get请求
+					var datatype=options.datatype||"string";//或者默认字符串
+					var xhr=null;
+					if (window.XMLHttpRequest) {
+						xhr=new XMLHttpRequest;
+					} else{
+						xhr=new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xhr.onreadystatechange=function(){
+						if (xhr.status==4) {
+							//判断状态码
+							if (xhr.status>=200&&xhr.status<300||xhr.status==304) {
+								if(typeof options.success==="function"){
+									var response="";
+									if(datatype=="string"){
+										response=xhr.responseText;
+									}else if(datatype=="json"){
+										response=JSON.parse(xhr.responseText);
+									}
+									options.success(response);
+								}
+							} 
+								
+							}
+						}
+					xhr.open(type,url,true);
+				xhr.send(null);
+               }
+			}
+			var box=document.getElementById("box")		
+			$.ajax({
+				type:"get",
+				url: "http://route.showapi.com/1287-1?showapi_appid=170059&showapi_sign=61c4d86a489949b0af1a3cee8f03398a",
+				async:true,
+//				datatype:{
+//					"showapi_appid":"170059",//密钥在易源我是接口使用者的我的应用
+//					"showapi_sign":"61c4d86a489949b0af1a3cee8f03398a"
+//				},
+                datatype:"json",
+				success:function(response){
+					console.log(response);
+					var data=response.showapi_res_body.data;
+					console.log(data);
+					var str="";
+					for(var i=0;i<data.length;i++){
+						str+=`<div class="item">
+								<p>中文：${data[i].chinese}</p>
+								<p>英文：${data[i].english}</p>
+							</div>`
+					}
+					box.innerHTML=str;
+				}
+			});
+		</script>
+	</body>
+</html>

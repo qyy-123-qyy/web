@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 200px;
+				height: 200px;
+				background-color: plum;
+				display: none;
+			}
+			#box{
+				width: 400px;
+				height: 250px;
+				border: #FF1493 1px solid;
+				display: block;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<input type="button" value="显示" />
+		<input type="button" value="隐藏" />
+		<input type="button" value="切换" />
+		<p></p>
+		</div>
+		<div id="box">
+		<input type="button" value="下滑展开" />
+		<input type="button" value="上滑收回" />
+		<input type="button" value="滑动切换" />
+		<p></p>
+		</div>
+		<div id="box">
+		<input type="button" value="淡入" />
+		<input type="button" value="淡出" />
+		<input type="button" value="淡到某个数" />
+		<input type="button" value="淡出入切换" />		
+		<p></p>
+		</div>
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").eq(0).click(function(){
+				$("p").eq(0).show(1000);//让一个本身是display:none;的元素显示
+			});
+			$("input").eq(1).click(function(){
+				$("p").eq(0).hide(1000,function(){
+					alert("隐藏");
+				});//隐藏元素，display:block
+			});
+			$("input").eq(2).click(function(){
+				$("p").eq(0).toggle(1000);//切换显示状态。
+			});
+			$("input").eq(3).click(function(){
+				$("p").eq(1).slideDown(1000);//下滑展开
+			});
+			$("input").eq(4).click(function(){
+				$("p").eq(1).slideUp(1000);//上滑收回
+			});
+			$("input").eq(5).click(function(){
+				$("p").eq(1).slideToggle(1000);//滑动切换
+			});
+			$("input").eq(6).click(function(){
+				$("p").eq(2).fadeIn(1000);//淡入
+			});
+			$("input").eq(7).click(function(){
+				$("p").eq(2).fadeOut(1000);//淡出
+			});
+			$("input").eq(8).click(function(){
+				$("p").eq(2).fadeTo(1000,.5);//淡到某个数
+			});
+			$("input").eq(9).click(function(){
+				$("p").eq(2).fadeToggle(1000);//淡出入切换
+			});
+		</script>
+	</body>
+</html>

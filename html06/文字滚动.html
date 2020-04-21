@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				text-align: center;
+		
+			}
+			.a {
+				height: 40px;
+				overflow: hidden;
+			}
+			.a div div{
+				height: 40px;
+				width: 200px;
+				background-color: paleturquoise;
+				/*margin:auto ;*/
+				display: inline-block;
+				margin-bottom: 40px;
+				line-height: 40px;
+				
+			}
+			.a div:first-child{
+				animation: move 8s infinite linear;
+			}
+			.a div:nth-child(2) div{
+				background-color: pink;
+			}
+				.a div:nth-child div(2){
+				background-color: orchid;
+			}
+			@keyframes move{
+				from{margin-top: 40px;}
+				to{ margin-top: -400px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			周一
+		<div class="a">
+			<div id="">
+			<div>星期一</div>
+		</div>
+			<div id="">
+			<div>星期二</div>
+		</div>
+		<div id="">
+			<div>星期三</div>
+		</div>
+		</div>
+		
+			周末
+		</div>
+	</body>
+</html>

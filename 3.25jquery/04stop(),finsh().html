@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height:100px;
+				background: pink;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+			.box1{
+				width: 100px;
+				height:100px;
+				background: paleturquoise;
+				position: absolute;
+				top: 120px;
+				left: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="stop()" />
+		<input type="button" name="" id="" value="stop(true)" />
+		<input type="button" name="" id="" value="stop(true,true)" />
+		<input type="button" name="" id="" value="stop(false,true)" />
+		<div class="box"></div>	
+		<div class="box1"></div>	
+		
+		<script src="../js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".box").animate({"top":500},2000);
+			$(".box").animate({"left":500},2000);
+			$(".box").animate({"top":100},2000);
+			$(".box").animate({"left":100},2000);	
+			$("input:eq(0)").click(function(){
+				$(".box").stop();
+			})
+			$("input").eq(1).click(function(){
+				$(".box").stop(true);
+			})
+			$("input").eq(2).click(function(){
+				$(".box").stop(true,true);
+			})
+			$("input").eq(3).click(function(){
+				$(".box").stop(false,true);
+			})
+			$(".box1").stop(true).animate({"top":500},2000);
+			$(".box1").finish().animate({"top":500},2000);
+			
+			
+			
+		</script>
+	</body>
+</html>

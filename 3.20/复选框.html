@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var items=document.getElementsByName("items");
+				var btn=document.getElementById("btn");
+			//信号量
+			var state=0;//0都没有选 1全选
+			btn.onclick=function(){
+				//信号量是0,点击变成1,如果是1,点击变成0
+				state = state == 0 ? 1 : 0;
+				//checkbox的状态，是 ''或者是checked
+				var str = state == 0 ? '' : "checked";
+				this.value = state == 0 ? "全选" : "都不选" ;
+				for (var i=0;i<items.length;i++) {
+					items[i].checked=str;
+				}
+			}
+			}
+		</script>
+	</head>
+	<body>
+		看电影<input type="checkbox" name="items" id="" value="看电影" />
+		看书<input type="checkbox" name="items" id="" value="看书" />
+		听音乐<input type="checkbox" name="items" id="" value="听音乐" />
+		运动<input type="checkbox" name="items" id="" value="运动" />
+	 <input type="button" name="" id="btn" value="选择" />
+	</body>
+</html>

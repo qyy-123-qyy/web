@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="显示" />
+		<input type="button" name="" id="" value="隐藏" />
+		<input type="button" name="" id="" value="切换" />
+		<div id=""></div>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input:eq(0)").click(function(){
+//				$("div").show();
+				$("div").show(1000);
+			})
+			$("input:eq(1)").click(function(){
+				$("div").hide();
+			})
+				$("input:eq(2)").click(function(){
+				$("div").toggle(1000);
+			})
+		</script>
+	</body>
+</html>
