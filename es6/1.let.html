@@ -31,23 +31,48 @@
                 <p>${obj.age}</p>
              </li>`
           document.querySelector("ul").innerHTML=str;
+    
+    //防止循环变量变成全局变量
      for(var i=0;i<10;i++){
 
      }
      console.log(i);//10
-//let只能在局部，不会找全局
+
     for(let i=0;i<10;i++){
         console.log(i);
     }
-    console.log(i);//报错
+    console.log(i);//报错,要注释上面代码
+//let声明的变量只在所处于的块级有效，具有块级作用域，只能在局部，不会找全局
+    if(true){
+        let c=10;
+        console.log(c);
+        if(true){
+            let d=20;
+        }
+        //console.log(d);//undefined
+    }
+//let没有变量提升
+console.log(e);//undefinied
 
+var e=100;
+//console.log(f);//报错
+let f=2;
+
+//暂时性死区
+var num=50;
+if(true){
+    console.log(num);
+    let num=50;
+}
     {
         const a=1;
         var b=2;
-        consoloe.log(a);
+        console.log(a);
     }
-    consoloe.log(a);
-    consoloe.log(b);
+    console.log(a);
+    console.log(b);
+
+
     </script>
    
 </body>

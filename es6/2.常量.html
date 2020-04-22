@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const 声明常量，常量就是值(内存地址)，不能变化的量，具有块级作用域
+        if(true){
+            const a=10;
+            if(true){
+                const a=20;
+                console.log(a);//20
+            }
+         console.log(a);//10
+        }
+        //console.log(a);//a is not defined
+
+        //使用const声明的常量必须赋值初始值
+        //const PI;//报错没有赋值初始值
+        
+        //使用const声明的常量，常量赋值后不能更改
+        const PI=3.14;
+        //PI=100;//报错常量赋值后值(内存地址）不能更改
+
+        const arr=[200,100];
+        arr[0]=400;
+        console.log(arr);
+        arr=[10.20];
+        console.log(arr);//报错更改了常量
+
+        //存储的值不需要变化，用const，例如PI
+        </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function point(x,y){
+            this.x=x;
+            this.y=y;
+        }
+        point.prototype.fun=function(){
+            return "("+this.x+","+this.y+")";
+        };
+        var point=new point(20,30);
+        console.log(point.fun());
+
+        // class Diypoint{
+        //     //里面可以添加属性
+        //     //构造方法，不是自定义的在new的时候会自动调用这个方法        }
+        //    //初始化，通常会赋初值
+        //  constructor(x,y){
+        //     this.x=x;
+        //     this.y=y;
+        //  }
+        //  fun(){
+        //      return "("+this.x+","+this.y+")";
+        //  }
+        // }
+        // var diy=new Diypoint(20,30);
+        // console.log(diy,fun());
+      
+            </script>
+</body>
+</html>

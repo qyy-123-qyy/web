@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(name){
+            name=name||"black";
+            console.log(name);
+        }
+        fun();
+        fun("黑");
+
+        //ES6默认参数
+        function fun1(name="yellow"){
+            console.log(name);
+        }
+        fun1();
+        fun1("yang xiao long");
+        //剩余参数 ...reset剩余的参数
+        function fun2(a, ...reset){
+            console.log(a);
+            console.log(reset);
+        }
+        fun2(11);
+        fun2(11,22,33,44,55,66,77);
+   var arr=["ruby rose","black","white","yang xiao long"];
+   console.log(arr[0]);
+   function fun3(a,b,c,d){
+       console.log(a,b,c,d);
+   }
+   fun3(arr[0],arr[1],arr[2],arr[3]);//第一种传参
+   fun3(null,arr);
+   fun3.apply(null,arr);
+   fun3.call(null,arr[0],arr[1],arr[2],arr[3]);
+   //参数的映射
+   fun3(...arr);
+    </script>
+</body>
+</html>

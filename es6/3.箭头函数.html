@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4];
+        arr.forEach(function(k){
+            console.log(k);
+        })
+        //箭头函数的使用，省略function（如果是一个参数会省略小括号，多个参数保留小括号）可以省略大括号
+        //一个参数，一条语句
+        arr.forEach(k => console.log(k));
+        //多个参数，多条语句
+        arr.forEach((k,v) =>{
+            console.log(k);
+            console.log(v) 
+        })
+        //函数：x参数，不用写return
+        var fun=function(x){
+            return x*x;
+        };
+       console.log( fun(8));
+
+       var fun1 = x => x*x;
+       console.log( fun(7));
+       
+       var fun3= () => 10;
+       console.log(fun3());
+        </script>
+</body>
+</html>
