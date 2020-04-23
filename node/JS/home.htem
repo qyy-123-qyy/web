@@ -1,0 +1,7 @@
+function (error,data){
+    if(error){
+        throw error;
+    }
+    console.log(userid+"读取完毕");
+    res.end(data);
+}
